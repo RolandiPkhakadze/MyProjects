@@ -30,12 +30,13 @@
         <input type="password" id="reppassword" name="reppassword" placeholder="Repeat password" required ><br><br>
         <%if(request.getAttribute("status") != null){%>
             <% if(request.getAttribute("status").equals("uname taken")){%>
-                <label form="registration-form"> Username already taken, DUMB! </label>
-            <%} else if(request.getAttribute("status").equals("mail taken")){%>
-                <label form="registration-form"> Mail already taken, DUMB! </label>
+                <label form="registration-form"> Username already taken </label>
+            <%} else if(request.getAttribute("status").equals("invalid email")){%>
+                <label form="registration-form"> Already taken or not valid email </label>
             <%}else if(request.getAttribute("status").equals("pass mismatch")){%>
-                <label form="registration-form"> Are you IDIOT?! passwords don't match. dumbass... </label><br><br>
+                <label form="registration-form">passwords don't match</label><br><br>
         <%}}%>
+        <br><br>
         <%--      <input type="submit" value="Register" href="userPage.jsp">--%>
         <button type="submit" class="regbtn" href="userPage.jsp" value="Register" >Register</button>
 </form>

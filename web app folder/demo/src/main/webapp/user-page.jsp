@@ -29,6 +29,15 @@
         <input type="password" id="password" name="password" placeholder="Password" ><br><br>
         <label for="repeat-password">Please, confirm password:</label><br>
         <input type="password" id="repeat-password" name="repeat-password" placeholder="Repeat password"  ><br><br>
+        <%if(request.getAttribute("updateStatus") != null){%>
+        <% if(request.getAttribute("updateStatus").equals("uname taken")){%>
+        <label form="registration-form"> Username already taken </label>
+        <%} else if(request.getAttribute("updateStatus").equals("invalid email")){%>
+        <label form="registration-form"> Already taken or not valid email </label>
+        <%}else if(request.getAttribute("updateStatus").equals("pass mismatch")){%>
+        <label form="registration-form"> passwords don't match </label><br><br>
+        <%}}%>
+        <br><br>
         <input type="submit" value="Update">
     </div>
 

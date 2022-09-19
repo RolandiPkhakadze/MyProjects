@@ -1,5 +1,5 @@
-create database db;
-use db;
+create database mydb;
+use mydb;
 drop table if exists users;
 CREATE TABLE users(
     id int  AUTO_INCREMENT PRIMARY KEY,

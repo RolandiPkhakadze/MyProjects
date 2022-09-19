@@ -2,6 +2,7 @@ package com.example.demo.servlets;
 
 import com.example.demo.controllers.User;
 import com.example.demo.daos.UserDao;
+import com.example.demo.service.UserValidator;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -14,12 +15,30 @@ public class UserPageServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
-        String mail = request.getParameter("mail");
+        String email = request.getParameter("mail");
         String firstname = request.getParameter("firstname");
         String lastname = request.getParameter("lastname");
         String password = request.getParameter("password");
         String repeatedPassword = request.getParameter("reppassword");
         String profession = request.getParameter("profession");
+
+        try {
+            if(UserValidator.usernameTaken(username)){
+                request.setAttribute("updateStatus", "uname taken");
+                request.getRequestDispatcher("user-page.jsp").forward(request, response);
+                return;
+            }else if(!email.isEmpty() && UserValidator.emailValidator(email)) {
+                request.setAttribute("updateStatus", "invalid email");
+                request.getRequestDispatcher("user-page.jsp").forward(request, response);
+                return;
+            }else if(UserValidator.notSamePasswords(password,repeatedPassword)){
+                request.setAttribute("updateStatus", "pass mismatch");
+                request.getRequestDispatcher("user-page.jsp").forward(request, response);
+                return;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
         User user = (User) request.getSession().getAttribute("user");
 
@@ -32,8 +51,8 @@ public class UserPageServlet extends HttpServlet {
         if(!lastname.isEmpty()){
             user.setLastName(lastname);
         }
-        if(!mail.isEmpty()){
-            user.setMail(mail);
+        if(!email.isEmpty()){
+            user.setMail(email);
         }
         if(!profession.isEmpty()){
             user.setProfession(profession);

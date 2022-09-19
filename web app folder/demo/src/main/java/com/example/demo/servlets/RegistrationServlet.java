@@ -2,6 +2,7 @@ package com.example.demo.servlets;
 
 import com.example.demo.controllers.User;
 import com.example.demo.daos.UserDao;
+import com.example.demo.service.UserValidator;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -25,16 +26,15 @@ public class RegistrationServlet extends HttpServlet {
 
 
         try {
-            UserDao userDao = new UserDao();
-            if(userDao.getUserDataByUsernameOrMail(username) != null){
+            if(UserValidator.usernameTaken(username)){
                 request.setAttribute("status", "uname taken");
                 request.getRequestDispatcher("registration.jsp").forward(request, response);
                 return;
-            }else if(userDao.getUserDataByUsernameOrMail(mail) != null) {
-                request.setAttribute("status", "mail taken");
+            }else if(UserValidator.emailTaken(mail) || !UserValidator.validEmail(mail)) {
+                request.setAttribute("status", "invalid email");
                 request.getRequestDispatcher("registration.jsp").forward(request, response);
                 return;
-            }else if(!password.equals(repeatedPassword)){
+            }else if(UserValidator.notSamePasswords(password,repeatedPassword)){
                 request.setAttribute("status", "pass mismatch");
                 request.getRequestDispatcher("registration.jsp").forward(request, response);
                 return;
