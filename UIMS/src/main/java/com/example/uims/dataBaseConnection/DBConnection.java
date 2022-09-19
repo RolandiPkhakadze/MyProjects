@@ -11,10 +11,13 @@ public class DBConnection {
     public static Connection getConnection() {
 
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodb",
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/db",
                     "root", "Babaiaga12");
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
 
         return connection;

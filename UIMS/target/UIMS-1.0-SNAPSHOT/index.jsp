@@ -5,9 +5,23 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<form action="LoginServlet" >
+    <h3>Log In</h3>
+    <label for="username">give me mail or username</label><br><br>
+    <input type="text" id="username" class="username" placeholder="username " name="username"><br><br>
+    <label for="password">give me password, asshole  :P :D</label><br><br>
+    <input type="password" id="password" class="input-box" placeholder="password" name="password"><br><br>
+    <% if (request.getAttribute("loginStatus") != null){ %>
+    <%  if (request.getAttribute("loginStatus").equals("wrong pid")) {%>
+    <label form="login-form"> Invalid username or mail </label>
+    <% }else if(request.getAttribute("loginStatus").equals("incorrect pass")) { %>
+    <label form="login-form"> Password incorrect </label>
+    <% }}%>
+    <br>
+    <button type="submit" class="login-button">Sign in</button>
+    <br>
+    <br>
+    <a style="font-size: smaller;color: rgb(40, 65, 24)" class="newtohere-link" href="registration.jsp">New to here? Sign up!</a>
+</form>
 </body>
 </html>

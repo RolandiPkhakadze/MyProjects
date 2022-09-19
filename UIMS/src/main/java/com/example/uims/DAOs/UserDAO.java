@@ -34,7 +34,7 @@ public class UserDAO {
 
     }
 
-    public User getUserByPersonalId(int personalId) throws SQLException {
+    public User getUserByPersonalId(String personalId) throws SQLException {
         PreparedStatement statement = connection.prepareStatement(GET_USER_BY_PERSONAL_ID);
 
         statement.setString(1, String.valueOf(personalId));
