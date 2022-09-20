@@ -1,5 +1,6 @@
 package com.example.uims.DAOs;
 
+import com.example.uims.Services.UserService;
 import com.example.uims.dataBaseConnection.DBConnection;
 import com.example.uims.model.User;
 
@@ -24,11 +25,11 @@ public class UserDAO {
         PreparedStatement statement = connection.prepareStatement(INSERT_USER);
 
         statement.setString(1,user.getPersonalId());
-        statement.setString(1,user.getFirstName());
-        statement.setString(1,user.getLastName());
-        statement.setString(1,user.getAddress());
-        statement.setString(1,user.getType());
-        statement.setString(1,user.getPassword());
+        statement.setString(2,user.getFirstName());
+        statement.setString(3,user.getLastName());
+        statement.setString(4,user.getAddress());
+        statement.setString(5,user.getType());
+        statement.setString(6,user.getPassword());
 
         statement.executeUpdate();
 
@@ -56,8 +57,9 @@ public class UserDAO {
                 resultSet.getString("first_name"),
                 resultSet.getString("last_name"),
                 resultSet.getString("address"),
-                resultSet.getString("type"),
+                UserService.getUserType(resultSet.getString("type")),
                 resultSet.getString("password")
         );
     }
+
 }

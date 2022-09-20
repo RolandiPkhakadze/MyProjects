@@ -1,15 +1,17 @@
 package com.example.uims.model;
 
+import com.example.uims.enums.Type;
+
 public class User {
     private int userId;
-    private String personalId;
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String type;
-    private String password;
+    private final String personalId;
+    private final String firstName;
+    private final String lastName;
+    private final String address;
+    private final Type type;
+    private final String password;
 
-    public User(int userId, String personalId, String firstName, String lastName, String address, String type, String password) {
+    public User(int userId, String personalId, String firstName, String lastName, String address, Type type, String password) {
         this.userId = userId;
         this.personalId = personalId;
         this.firstName = firstName;
@@ -19,7 +21,7 @@ public class User {
         this.password = password;
     }
 
-    public User(String personalId, String firstName, String lastName, String address, String type, String password) {
+    public User(String personalId, String firstName, String lastName, String address, Type type, String password) {
         this.personalId = personalId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -49,7 +51,7 @@ public class User {
     }
 
     public String getType() {
-        return type;
+        return type.getUserType();
     }
 
     public String getPassword() {

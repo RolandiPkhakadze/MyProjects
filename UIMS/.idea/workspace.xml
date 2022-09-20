@@ -9,22 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23dec0be-cd50-46f8-9686-5cbe07bc3903" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/295102696_1031892210849854_8451841499305770545_n.png" beforeDir="false" />
+    <list default="true" id="23dec0be-cd50-46f8-9686-5cbe07bc3903" name="Changes" comment="add UserService, RegistrationServlet,registration.jsp, type enum.">
+      <change afterPath="$PROJECT_DIR$/setUpDb/SetUpDb.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/Services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/enums/Type.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/RegistrationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/home-page.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UIMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UIMS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setUpDb/SetUpDb.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/DAOs/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/dataBaseConnection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/dataBaseConnection/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UIMS-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/UIMS-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UIMS-1.0-SNAPSHOT/WEB-INF/classes/com/example/uims/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/UIMS-1.0-SNAPSHOT/WEB-INF/classes/com/example/uims/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/UIMS-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/UIMS-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/uims/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/uims/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/uims/HelloServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -74,6 +73,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\MyProjects\UIMS\src\main\webapp" />
+    </key>
+  </component>
   <component name="RunManager" selected="Smart Tomcat.Tomcat: UIMS">
     <configuration name="Tomcat 9.0.651" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.651" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -147,11 +151,24 @@
       <option name="presentableId" value="Default" />
       <updated>1663601320518</updated>
       <workItem from="1663601322706" duration="1052000" />
-      <workItem from="1663604095946" duration="892000" />
+      <workItem from="1663604095946" duration="6736000" />
     </task>
+    <task id="LOCAL-00001" summary="IDK">
+      <created>1663610625132</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663610625132</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="IDK" />
+    <MESSAGE value="add UserService, RegistrationServlet,registration.jsp, type enum." />
+    <option name="LAST_COMMIT_MESSAGE" value="add UserService, RegistrationServlet,registration.jsp, type enum." />
   </component>
 </project>
