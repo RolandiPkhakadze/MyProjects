@@ -44,7 +44,7 @@ public class RegistrationServlet extends HttpServlet {
         } catch (SQLException | NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
-        request.getRequestDispatcher("home-page.jsp").forward(request,response);
+        request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 
 }

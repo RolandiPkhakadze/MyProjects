@@ -2,26 +2,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Log In</title>
 </head>
 <body>
 <form action="LoginServlet" >
     <h3>Log In</h3>
-    <label for="username">give me mail or username</label><br><br>
-    <input type="text" id="username" class="username" placeholder="username " name="username"><br><br>
+    <label for="pid">Enter Your Personal ID</label><br><br>
+    <input type="text" id="pid" class="pid" placeholder="Personal ID " name="pid"><br><br>
     <label for="password">give me password</label><br><br>
     <input type="password" id="password" class="input-box" placeholder="password" name="password"><br><br>
     <% if (request.getAttribute("loginStatus") != null){ %>
     <%  if (request.getAttribute("loginStatus").equals("wrong pid")) {%>
-    <label form="login-form"> Invalid username or mail </label>
+    <label>Invalid Personal ID</label>
     <% }else if(request.getAttribute("loginStatus").equals("incorrect pass")) { %>
-    <label form="login-form"> Password incorrect </label>
+    <label> Password incorrect </label>
     <% }}%>
     <br>
     <button type="submit" class="login-button">Sign in</button>
     <br>
     <br>
-    <a style="font-size: smaller;color: rgb(40, 65, 24)" class="newtohere-link" href="registration.jsp">New to here? Sign up!</a>
+    <a href="registration.jsp">New to here? Sign up!</a>
 </form>
 </body>
 </html>

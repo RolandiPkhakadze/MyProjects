@@ -8,9 +8,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Home Page</title>
 </head>
 <body>
-    <h1>Hello there!</h1>
+    <span  id="span-convictions">
+        <a href="${pageContext.request.contextPath}/convictions.jsp" role="button" id="convictions-button">
+            <span>Convictions</span>
+        </a>
+    </span><br><br>
+    <span id="span-health-care">
+        <a href="${pageContext.request.contextPath}/health-care.jsp" role="button" id="health-care-button">
+            <span>Health care</span>
+        </a>
+    </span><br><br>
+    <span id="migration-care">
+        <a href="${pageContext.request.contextPath}/migration.jsp" role="button" id="migration-button">
+            <span>Traveling</span>
+        </a>
+    </span><br><br>
+
 </body>
 </html>

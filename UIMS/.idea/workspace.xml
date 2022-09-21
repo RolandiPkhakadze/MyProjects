@@ -9,19 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23dec0be-cd50-46f8-9686-5cbe07bc3903" name="Changes" comment="add UserService, RegistrationServlet,registration.jsp, type enum.">
-      <change afterPath="$PROJECT_DIR$/setUpDb/SetUpDb.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/Services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/enums/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/RegistrationServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/home-page.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/registration.jsp" afterDir="false" />
+    <list default="true" id="23dec0be-cd50-46f8-9686-5cbe07bc3903" name="Changes" comment="add Conviction page and some services for it">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/DAOs/ConvictionsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/Services/ConvictionsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/ConvictionServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/HomePageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/convictions.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/health-care.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/migration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/DAOs/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/uims/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/uims/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/uims/servlets/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home-page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/uims/HelloServlet.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +32,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="6a7c87a2-1781-49aa-8111-5b2fb82183db" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -151,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663601320518</updated>
       <workItem from="1663601322706" duration="1052000" />
-      <workItem from="1663604095946" duration="6736000" />
+      <workItem from="1663604095946" duration="14637000" />
     </task>
     <task id="LOCAL-00001" summary="IDK">
       <created>1663610625132</created>
@@ -160,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663610625132</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add UserService, RegistrationServlet,registration.jsp, type enum.">
+      <created>1663662980936</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663662980936</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +180,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="IDK" />
     <MESSAGE value="add UserService, RegistrationServlet,registration.jsp, type enum." />
-    <option name="LAST_COMMIT_MESSAGE" value="add UserService, RegistrationServlet,registration.jsp, type enum." />
+    <MESSAGE value="add Conviction page and some services for it" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Conviction page and some services for it" />
   </component>
 </project>
